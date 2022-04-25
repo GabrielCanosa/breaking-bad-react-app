@@ -18,7 +18,7 @@ export const HomeScreen = () => {
                         <ChemicalElement word={"Contacte me"} letters={1}/>
                     </div>
                     <div className="flex justify-center flex-col md:flex-row p-5">
-                        <a href="#" className="block relative p-2">
+                        <a href="https://github.com/GabrielCanosa/React-first-web-app" className="block relative p-2">
                             <img alt="profil" src={`../assets/github.png`} className="mx-auto object-cover rounded-full h-16 w-16 "/>
                         </a>
                         <a href="https://www.linkedin.com/in/gabriel-canosa/" className="block relative p-2">
