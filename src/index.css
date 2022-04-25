@@ -1,13 +1,114 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.group {
+    width: 250px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+img {
+    max-height: 300px;
 }
+
+.tab-content {
+    max-height: 0;
+    -webkit-transition: max-height .35s;
+    -o-transition: max-height .35s;
+    transition: max-height .35s;
+    }
+    
+    .tab input:checked ~ .tab-content {
+    max-height: 100vh;
+    }
+
+    .tab input:checked + label{
+    font-size: 1.25rem;
+    padding: 1.25rem;
+    border-left-width: 2px;
+    border-color: #6574cd;
+    background-color: #f8fafc;
+    color: #6574cd;
+    }
+    
+    .tab label::after {
+    float:right;
+    right: 0;
+    top: 0;
+    display: block;
+    width: 1.5em;
+    height: 1.5em;
+    line-height: 1.5;
+    font-size: 1.25rem;
+    text-align: center;
+    -webkit-transition: all .35s;
+    -o-transition: all .35s;
+    transition: all .35s;
+    }
+    
+    .tab input[type=checkbox] + label::after {
+    content: "+";
+    font-weight:bold;
+    border-width: 1px;
+    border-radius: 9999px;
+    border-color: #b8c2cc;
+    }
+
+    .tab input[type=radio] + label::after {
+    content: "\25BE";
+    font-weight:bold;
+    border-width: 1px;
+    border-radius: 9999px;
+    border-color: #b8c2cc;
+    }
+    
+    .tab input[type=checkbox]:checked + label::after {
+    transform: rotate(315deg);
+    background-color: #6574cd;
+    color: #f8fafc;
+    }
+    
+    .tab input[type=radio]:checked + label::after {
+    transform: rotateX(180deg);
+    background-color: #6574cd;
+    color: #f8fafc;
+    }
+
+    .firstLetter {
+        padding:10px;
+        background:green;
+        border:3px solid rgb(0, 0, 0);
+        color: white;
+        width:100px;
+        height:100px;
+        background: #46a08c;
+        background: -webkit-linear-gradient(130deg, #46a08c 0%, #1C3F1D 100%, #303030 90%);
+        background: -moz-linear-gradient(130deg, #46a08c 0%, #1C3F1D 100%, #303030 90%);
+        background: -o-linear-gradient(130deg, #46a08c 0%, #1C3F1D 100%, #303030 90%);
+        background: linear-gradient(130deg, #46a08c 0%, #1C3F1D 100%, #303030 90%);
+        box-shadow:inset 0px 2px 2px rgba(50,50,50,.6);
+    }
+
+    .restOfWord {
+        height:100px;
+    }
+
+    .letters {
+        text-align: center;
+        padding-top: 30px;
+        font-size: xx-large;
+    }
+
+    .justify-center {
+        justify-content: center;
+    }
+
+    .seasonNum,.episodeNum {
+        font-size:14px;
+        display:inline-block;
+        position: absolute;
+        margin-left:165px;
+      }
