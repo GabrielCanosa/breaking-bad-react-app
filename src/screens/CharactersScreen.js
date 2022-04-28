@@ -22,7 +22,7 @@ export const CharactersScreen = () => {
                 characters !== undefined &&
                 characters.map(character => (
                     <div className="shadow-lg rounded-2xl w-79 bg-white dark:bg-gray-800 p-1">
-                        <img alt={`${character.name}`} src={character.category === 'Breaking Bad' ? `./assets/BreakingBadBackground.jpg` : `./assets/BetterCallSaulBackground.jpg`} className="rounded-t-lg h-28 w-full mb-4"/>
+                        <img alt={`${character.name}`} src={character.category === 'Breaking Bad' ? `./assets/breakingBadBackground.jpg` : `./assets/BetterCallSaulBackground.jpg`} className="rounded-t-lg h-28 w-full mb-4"/>
                         <div className="flex flex-col items-center justify-center p-4 -mt-16">
                             <a href="#" className="block relative">
                                 <img alt={`${character.name}`} src={`${character.img}`} className="mx-auto object-cover rounded-full h-16 w-16  border-2 border-white dark:border-gray-800"/>
